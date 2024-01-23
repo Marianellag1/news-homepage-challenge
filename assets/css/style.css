@@ -6,3 +6,277 @@
 .attribution a {
     color: hsl(228, 45%, 44%);
 }
+
+:root {
+    /* primary */
+    --soft-orange: hsl(35, 77%, 62%);
+    --soft-red: hsl(5, 85%, 63%);
+    /* neutral */
+    --off-white: hsl(36, 100%, 99%);
+    --grayish-blue: hsl(233, 8%, 79%);
+    --dark-grayish-blue: hsl(236, 13%, 42%);
+    --very-dark-blue: hsl(240, 100%, 5%);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Inter", sans-serif;
+    padding: 2rem 0;
+    /* 400,700,800 */
+}
+
+header,
+main,
+footer {
+    width: 100%;
+}
+
+/* header */
+header .hidden {
+    display: none;
+}
+
+header .navbar {
+    padding: 2rem 0.25rem;
+    background-color: var(--off-white) !important;
+
+}
+
+header .navbar-toggler {
+    border: none;
+}
+
+/* header ending */
+
+/* main */
+main {
+    padding: 0 1.5rem;
+    margin: .50rem 0 2.5rem 0;
+}
+
+main .hero-image {
+    background-image: url(../images/image-web-3-mobile.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 273px;
+}
+
+.main-article h1 {
+    margin: 2rem 0 1rem 0;
+    font-weight: 800;
+    line-height: 3rem;
+    font-size: 3rem;
+}
+
+.main-article p {
+    color: var(--dark-grayish-blue);
+    font-size: 17px;
+    line-height: 2rem;
+}
+
+.main-article button {
+    border: none;
+    cursor: pointer;
+    font-weight: 700;
+    padding: 1rem 2rem;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    color: var(--off-white);
+    background-color: var(--soft-red);
+    margin: 1rem 0 2rem 0;
+}
+
+.side-article {
+    margin: 2rem 0;
+    padding: 1.5rem;
+    background-color: var(--very-dark-blue);
+}
+
+.side-article h2 {
+    font-weight: 700;
+    font-size: 2.1rem;
+    margin-bottom: .50rem;
+    color: var(--soft-orange);
+}
+
+.side-article .new-box a {
+    text-decoration: none;
+    color: var(--off-white);
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.side-article .new-box {
+    padding: 1.7rem 0;
+}
+
+.side-article .last {
+    padding-bottom: 0;
+}
+
+.side-article .line {
+    border-bottom: solid 1px var(--grayish-blue);
+}
+
+.hydrogen,
+.downloads,
+.funding {
+    color: var(--grayish-blue);
+    font-size: 17px;
+}
+
+/* main ending */
+
+/* footer */
+.bottom {
+    padding: 0 1.5rem;
+    margin: 4rem 0;
+}
+
+.bottom .bottom-box {
+    display: flex;
+    margin: 1rem 0 0 0;
+}
+
+.bottom .bottom-box img {
+    width: 145px;
+    margin-right: 2rem;
+    height: 160px;
+}
+
+.bottom .side-box h3 {
+    color: var(--grayish-blue);
+    font-weight: 700;
+    font-size: 2.5rem;
+}
+
+.bottom .side-box a {
+    text-decoration: none;
+    color: var(--very-dark-blue);
+    font-weight: 800;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.bottom .side-box .words {
+    color: var(--dark-grayish-blue);
+    font-size: 17px;
+}
+
+/* footer ending */
+
+
+@media screen and (min-width: 651px) {
+    header .hidden {
+        display: block;
+    }
+
+    header .header {
+        display: flex;
+        justify-content: space-between;
+        padding: 0 2rem;
+        margin-bottom: 2rem;
+    }
+
+    header .header ul {
+        display: flex;
+    }
+
+    header .header li {
+        list-style-type: none;
+        margin-left: 2rem;
+    }
+
+    header .header a {
+        text-decoration: none;
+        color: var(--dark-grayish-blue);
+        cursor: pointer;
+        margin: 0 .30rem;
+    }
+
+    header .header a:hover {
+        color: var(--soft-red);
+    }
+
+    header .navbar {
+        display: none;
+    }
+
+    .main-display .main-article button:hover {
+        background-color: var(--very-dark-blue);
+        transition: 0.3s;
+    }
+
+    main .side-article .new-box a:hover {
+        color: var(--soft-orange);
+    }
+
+    .bottom .bottom-box a:hover {
+        color: var(--soft-red);
+    }
+}
+
+@media screen and (min-width: 1000px) {
+
+    main {
+        display: flex;
+    }
+
+    main .main-display {
+        margin-right: 2rem;
+    }
+
+    .main-display .hero-image {
+        background-image: url(../images/image-web-3-desktop.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 365px;
+    }
+
+    .main-display .main-article h1 {
+        font-size: 4rem;
+        line-height: 4rem;
+    }
+
+    .main-display .main-article {
+        display: flex;
+    }
+
+    .main-display .main-article .article {
+        padding: 2rem 1rem 2rem 2rem;
+    }
+
+    main .side-article {
+        margin: 0;
+        width: 900px;
+    }
+
+    main .side-article h2 {
+        font-size: 3rem;
+    }
+
+    footer .bottom {
+        display: flex;
+    }
+
+    footer .bottom .bottom-box {
+        align-items: center;
+    }
+
+    footer .bottom .middle {
+        margin: 0 1rem;
+    }
+
+    footer .bottom .left {
+        margin-right: .50rem;
+    }
+
+    footer .bottom .right {
+        margin-left: .50rem;
+    }
+}
